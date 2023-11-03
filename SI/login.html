@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('./img/pic1.jpg');
+      background-size: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    .container {
+        max-width: 400px;
+      padding: 80px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e64936;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e64934;
+    }
+    .error {
+      color: red;
+      margin-bottom: 10px;
+    }
+    /* Animation */
+    .container {
+      animation: slide-in 0.5s ease-out;
+    }
+    @keyframes slide-in {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Log In</h1>
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+      <div class="error" id="error-message"></div>
+      <button type="submit">Log In</button>
+      <p>Don't have account?</p>
+      <a href="signup.html">Sign Up here</a>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("login-form");
+    const errorMessage = document.getElementById("error-message");
+
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+
+      // You can add more advanced authentication logic here
+      // For this example, we'll just check if the email and password are not empty
+      if (!emailInput.value || !passwordInput.value) {
+        errorMessage.textContent = "Please enter both email and password.";
+      } else {
+        // You can handle the log-in logic here
+        // For this example, we'll just show an alert
+        alert("Logged in successfully!");
+      }
+    });
+  </script>
+</body>
+</html>
