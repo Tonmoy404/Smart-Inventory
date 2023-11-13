@@ -11,6 +11,10 @@ import (
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 )
 
+const (
+	EmailIndex = "EmailIndex"
+)
+
 type SupplierRepo interface {
 	service.SupplierRepo
 }
@@ -52,7 +56,7 @@ func (r *supplierRepo) Create(ctx context.Context, sup *service.Supplier) error 
 func (r *supplierRepo) GetSupplierByEmail(ctx context.Context, email string) (*service.Supplier, error) {
 	input := &dynamodb.QueryInput{
 		TableName:              aws.String(r.tableName),
-		IndexName:              aws.String(userEmailIndex),
+		IndexName:              aws.String(EmailIndex),
 		KeyConditionExpression: aws.String("Email = :email"),
 		ExpressionAttributeValues: map[string]*dynamodb.AttributeValue{
 			":email": {
@@ -198,7 +202,7 @@ func (r *supplierRepo) GetAllSuppliers(ctx context.Context) (*service.SupplierRe
 		TableName: aws.String(r.tableName),
 	}
 
-	result, err := r.svc.ScanWithContext(ctx, input) 
+	result, err := r.svc.ScanWithContext(ctx, input)
 	if err != nil {
 		return nil, fmt.Errorf("error scanning table: %v", err)
 	}

@@ -18,7 +18,6 @@ func (s *Server) createProduct(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, s.svc.Error(ctx, util.EN_API_PARAMETER_INVALID_ERROR, "Bad request"))
 		return
 	}
-
 	productID, err := uuid.NewUUID()
 	if err != nil {
 		logger.Error(ctx, "cannot generate productID", err)
@@ -122,13 +121,25 @@ func (s *Server) getAllProducts(ctx *gin.Context) {
 
 	var products []*productResponse
 	for _, pro := range productResult.Products {
+		var status string
+
+		if pro.Quantity > pro.ThreSholdValue {
+			status = "In Stock"
+		} else if pro.Quantity < pro.ThreSholdValue && pro.Quantity > 0 {
+			status = "Low Stock"
+		} else {
+			status = "Out of Stock"
+		}
+
 		proRes := &productResponse{
-			ID:          pro.ID,
-			Name:        pro.Name,
-			BuyingPrice: pro.BuyingPrice,
-			Quantity:    pro.Quantity,
-			ExpiryDate:  pro.ExpiryDate,
-			CreatedAt:   pro.CreatedAt,
+			ID:             pro.ID,
+			Name:           pro.Name,
+			BuyingPrice:    pro.BuyingPrice,
+			Quantity:       pro.Quantity,
+			ExpiryDate:     pro.ExpiryDate,
+			ThreSholdValue: pro.ThreSholdValue,
+			CreatedAt:      pro.CreatedAt,
+			Status:         status,
 		}
 		products = append(products, proRes)
 	}

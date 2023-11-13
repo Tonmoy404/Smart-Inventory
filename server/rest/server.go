@@ -38,37 +38,37 @@ func (server *Server) setupRouter() {
 	router.POST("/api/users/signup", server.signupUser)
 	router.POST("/api/users/login", server.loginUser)
 
-	authRoutes := router.Group("/").Use(server.authMiddleware())
+	// authRoutes := router.Group("/").Use(server.authMiddleware())
 
-	authRoutes.POST("/api/users/add", server.addUser)
-	authRoutes.DELETE("/api/users/:id", server.deleteUser)
-	authRoutes.GET("/api/users/:id", server.getUser)
-	authRoutes.PATCH("/api/users/update", server.updateUser)
-	authRoutes.POST("/api/users/logout", server.logoutUser)
-	authRoutes.GET("/api/users/profile", server.getUserProfile)
-	authRoutes.PATCH("/api/users/password", server.changePassword)
+	router.POST("/api/users/add", server.addUser)
+	router.DELETE("/api/users/:id", server.deleteUser)
+	router.GET("/api/users/:id", server.getUser)
+	router.PATCH("/api/users/update", server.updateUser)
+	router.POST("/api/users/logout", server.logoutUser)
+	router.GET("/api/users/profile", server.getUserProfile)
+	router.PATCH("/api/users/password", server.changePassword)
 
 	///product routes
 
-	authRoutes.POST("/api/item/screate", server.createProduct)
-	authRoutes.DELETE("/api/item/s:id", server.deleteProduct)
-	authRoutes.PATCH("/api/items/:id", server.updateProduct)
-	authRoutes.GET("/api/items/all", server.getAllProducts)
+	router.POST("/api/items/create", server.createProduct)
+	router.DELETE("/api/item/s:id", server.deleteProduct)
+	router.PATCH("/api/items/:id", server.updateProduct)
+	router.GET("/api/items/all", server.getAllProducts)
 
 	///order routes
-	authRoutes.POST("/api/orders/create", server.createOrder)
-	authRoutes.DELETE("/api/orders/:id", server.cancelOrder)
-	authRoutes.GET("/api/orders/:id", server.getOrder)
-	authRoutes.PATCH("/api/orders/:id", server.updateOrder)
-	authRoutes.GET("/api/orders/all", server.getAllOrders)
+	router.POST("/api/orders/create", server.createOrder)
+	router.DELETE("/api/orders/:id", server.cancelOrder)
+	router.GET("/api/orders/:id", server.getOrder)
+	router.PATCH("/api/orders/:id", server.updateOrder)
+	router.GET("/api/orders/all", server.getAllOrders)
 
 	///supplier routes
 
-	authRoutes.POST("/api/suppliers/add", server.addSupplier)
-	authRoutes.DELETE("/api/suppliers/:id", server.deleteSupplier)
-	authRoutes.PATCH("/api/suppliers/:id", server.updateSuplier)
-	authRoutes.GET("/api/suppliers/all", server.getAllSupplier)
-	authRoutes.GET("/api/suppliers/:id", server.getSupplier)
+	router.POST("/api/suppliers/add", server.addSupplier)
+	router.DELETE("/api/suppliers/:id", server.deleteSupplier)
+	router.PATCH("/api/suppliers/:id", server.updateSuplier)
+	router.GET("/api/suppliers/all", server.getAllSupplier)
+	router.GET("/api/suppliers/:id", server.getSupplier)
 
 	server.router = router
 }
