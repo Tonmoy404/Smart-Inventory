@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/Tonmoy404/Smart-Inventory/logger"
 	"github.com/Tonmoy404/Smart-Inventory/service"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
@@ -54,12 +55,13 @@ func (r *orderRepo) CancelOrderByID(ctx context.Context, id string) error {
 	input := &dynamodb.DeleteItemInput{
 		TableName: aws.String(r.tableName),
 		Key: map[string]*dynamodb.AttributeValue{
-			"OrderId": {
+			"Id": {
 				S: aws.String(id),
 			},
 		},
 	}
 
+	logger.Info(ctx, "input from order", input)
 	_, err := r.svc.DeleteItemWithContext(ctx, input)
 	if err != nil {
 		if aerr, ok := err.(awserr.Error); ok {
@@ -75,7 +77,7 @@ func (r *orderRepo) GetOrder(ctx context.Context, id string) (*service.Order, er
 	input := &dynamodb.GetItemInput{
 		TableName: aws.String(r.tableName),
 		Key: map[string]*dynamodb.AttributeValue{
-			"OrderId": {
+			"Id": {
 				S: aws.String(id),
 			},
 		},
