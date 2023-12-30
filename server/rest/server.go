@@ -1,10 +1,12 @@
 package rest
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 
 	"github.com/Tonmoy404/Smart-Inventory/config"
+	"github.com/Tonmoy404/Smart-Inventory/logger"
 	"github.com/Tonmoy404/Smart-Inventory/service"
 	"github.com/gin-gonic/gin"
 )
@@ -79,5 +81,23 @@ func (server *Server) Start() error {
 }
 
 func (server *Server) test(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, "testing the server and its running successfully")
+	res, err := http.Get("http://127.0.0.1:5000/?predictBy=month")
+
+	if err != nil {
+		logger.Info(ctx, "", err)
+	}
+
+	defer res.Body.Close()
+
+	// Decode the JSON response into a 2D array
+	var result [][]interface{}
+	err = json.NewDecoder(res.Body).Decode(&result)
+	if err != nil {
+		// Handle the JSON decoding error and return a response
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	// Return the result through the Gin response
+	ctx.JSON(http.StatusOK, gin.H{"data": result})
 }

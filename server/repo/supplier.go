@@ -198,7 +198,7 @@ func (r *supplierRepo) GetAllSuppliers(ctx context.Context) (*service.SupplierRe
 		TableName: aws.String(r.tableName),
 	}
 
-	result, err := r.svc.ScanWithContext(ctx, input) 
+	result, err := r.svc.ScanWithContext(ctx, input)
 	if err != nil {
 		return nil, fmt.Errorf("error scanning table: %v", err)
 	}

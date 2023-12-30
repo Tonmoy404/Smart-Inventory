@@ -6,7 +6,7 @@ export default function DashboardLeft() {
                 <div className="col-lg-12 dashboard-left p-3">
                     <div className="dashboard-left-header text-center">
                         <img className="me-2" src="../images/logo.png"></img>
-                        <h2 className="d-inline-block">KANBAN</h2>
+                        <h2 className="d-inline-block">Inventory</h2>
                     </div>
                     <div className="dashboard-left-menu">
                         <DashboardLeftNav />

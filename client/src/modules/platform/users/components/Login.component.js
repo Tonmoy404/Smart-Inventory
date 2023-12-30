@@ -28,6 +28,7 @@ export function Login() {
         navigate("/dashboard");
       }
     } catch (error) {
+      alert("Invalid Credentials")
       console.error(error);
     }
   };

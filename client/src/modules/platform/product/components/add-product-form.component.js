@@ -197,36 +197,41 @@ import axios from "axios";
 
 export default function AddProduct() {
   const [formData, setFormData] = useState({
-    product_name: "",
+    name: "",
     category: "",
-    buying_price: "",
-    productQuantity: "",
-    delivery_date: "",
-    vendor_email: "",
+    buying_price: 0,
+    quantity: 0,
+    expiry_date: "",
+    threshold_value: 0,
   });
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    const numericValue = !isNaN(value) ? Number(value) : value;
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value,
+      [name]: numericValue,
     }));
   };
-
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
         "http://localhost:3001/api/items/create",
-        formData
+        JSON.stringify(formData),  {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
       );
       console.log(response.data);
       setFormData({
-        product_name: "",
+        name: "",
         category: "",
-        buying_price: null,
-        quantity: null,
-        delivery_date: null,
-        vendor_email: "",
+        buying_price: 0,
+        quantity: 0,
+        expiry_date: "",
+        threshold_value: 0,
       });
     } catch (error) {
       alert("Check all input fields");
@@ -242,10 +247,10 @@ export default function AddProduct() {
       <div className="inventory-modal-form">
         <ModalInput
           label="Product Name"
-          inputId="product_name"
+          inputId="name"
           placeholder="Enter product name"
-          name="product_name"
-          value={formData.product_name}
+          name="name"
+          value={formData.name}
           onChange={handleChange}
         />
         <ModalInput
@@ -273,19 +278,19 @@ export default function AddProduct() {
           onChange={handleChange}
         />
         <ModalInput
-          label="Delivery Date"
-          inputId="delivery_date"
-          placeholder="Enter Delivery Date"
-          name="delivery_date"
-          value={formData.delivery_date}
+          label="Expiry Date"
+          inputId="expiry_date"
+          placeholder="Enter Expiry Date"
+          name="expiry_date"
+          value={formData.expiry_date}
           onChange={handleChange}
         />
         <ModalInput
-          label="Vendor Email"
-          inputId="vendor_email"
-          placeholder="Enter Vendor Email"
-          name="vendor_email"
-          value={formData.vendor_email}
+          label="Threshold Value"
+          inputId="threshold_value"
+          placeholder="Enter Threshold Value"
+          name="threshold_value"
+          value={formData.threshold_value}
           onChange={handleChange}
         />
         <Button variant="contained" onClick={handleSubmit}>
