@@ -228,6 +228,7 @@ export default function AddProduct() {
         delivery_date: null,
         vendor_email: "",
       });
+
     } catch (error) {
       alert("Check all input fields");
       console.error(error);
