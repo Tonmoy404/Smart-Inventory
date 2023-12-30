@@ -3,6 +3,8 @@ package repo
 import (
 	"context"
 	"fmt"
+	"sort"
+	"time"
 
 	"github.com/Tonmoy404/Smart-Inventory/logger"
 	"github.com/Tonmoy404/Smart-Inventory/service"
@@ -161,7 +163,7 @@ func (r *productRepo) GetAllProducts(ctx context.Context) (*service.ProductsResu
 		TableName: aws.String(r.tableName),
 	}
 
-	result, err := r.svc.ScanWithContext(ctx, input) // Assuming you have the DynamoDB service client in r.svc
+	result, err := r.svc.ScanWithContext(ctx, input)
 	if err != nil {
 		return nil, fmt.Errorf("error scanning table: %v", err)
 	}
@@ -171,6 +173,12 @@ func (r *productRepo) GetAllProducts(ctx context.Context) (*service.ProductsResu
 	if err != nil {
 		return nil, fmt.Errorf("cannot unmarshal DynamoDB result: %v", err)
 	}
+
+	sort.Slice(products, func(i, j int) bool {
+		timeI := time.Unix(products[i].CreatedAt, 0)
+		timeJ := time.Unix(products[j].CreatedAt, 0)
+		return timeI.After(timeJ)
+	})
 
 	productResult := &service.ProductsResult{
 		Products: products,
