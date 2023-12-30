@@ -1,12 +1,12 @@
 package rest
 
 type CreateProductRequest struct {
-	Name           string  `form:"name" binding:"required"`
-	BuyingPrice    float64 `form:"buying_price" binding:"required"`
-	Category       string  `form:"category" binding:"required"`
-	Quantity       int64   `form:"quantity" binding:"required"`
-	ExpiryDate     int64   `form:"expiry_date"`
-	ThreSholdValue int64   `form:"threshold_value" binding:"required"`
+	Name           string  `json:"name" binding:"required"`
+	BuyingPrice    float64 `json:"buying_price" binding:"required"`
+	Category       string  `json:"category" binding:"required"`
+	Quantity       int64   `json:"quantity" binding:"required"`
+	ExpiryDate     int64   `json:"expiry_date"`
+	ThresholdValue int64   `json:"threshold_value" binding:"required"`
 }
 
 type CreateProductResponse struct {

@@ -25,20 +25,20 @@ func (s *Server) createProduct(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, s.svc.Error(ctx, util.EN_INTERNAL_SERVER_ERROR, "Internal Server Error"))
 	}
 
-	file, fileHeader, err := ctx.Request.FormFile("file")
-	if err != nil {
-		logger.Error(ctx, "cannot extract filename", err)
-		ctx.JSON(http.StatusInternalServerError, s.svc.Error(ctx, util.EN_INTERNAL_SERVER_ERROR, "Internal Server Error"))
-		return
-	}
-	defer file.Close()
+	// file, fileHeader, err := ctx.Request.FormFile("file")
+	// if err != nil {
+	// 	logger.Error(ctx, "cannot extract filename", err)
+	// 	ctx.JSON(http.StatusInternalServerError, s.svc.Error(ctx, util.EN_INTERNAL_SERVER_ERROR, "Internal Server Error"))
+	// 	return
+	// }
+	// defer file.Close()
 
-	fileURL, err := s.svc.UploadFile(ctx, file, fileHeader)
-	if err != nil {
-		logger.Error(ctx, "cannot upload file into s3", err)
-		ctx.JSON(http.StatusInternalServerError, s.svc.Error(ctx, util.EN_INTERNAL_SERVER_ERROR, "Internal Server Error"))
-		return
-	}
+	// fileURL, err := s.svc.UploadFile(ctx, file, fileHeader)
+	// if err != nil {
+	// 	logger.Error(ctx, "cannot upload file into s3", err)
+	// 	ctx.JSON(http.StatusInternalServerError, s.svc.Error(ctx, util.EN_INTERNAL_SERVER_ERROR, "Internal Server Error"))
+	// 	return
+	// }
 
 	createdAt := util.GetCurrentTimestamp()
 	expiryDate := createdAt + +(req.ExpiryDate * 24 * 60 * 60 * 1000)
@@ -47,11 +47,10 @@ func (s *Server) createProduct(ctx *gin.Context) {
 		ID:             productID.String(),
 		Name:           req.Name,
 		Quantity:       req.Quantity,
-		Image:          fileURL,
 		BuyingPrice:    req.BuyingPrice,
 		Category:       req.Category,
 		Status:         "available",
-		ThreSholdValue: req.ThreSholdValue,
+		ThreSholdValue: req.ThresholdValue,
 		CreatedAt:      createdAt,
 		ExpiryDate:     expiryDate,
 	}
