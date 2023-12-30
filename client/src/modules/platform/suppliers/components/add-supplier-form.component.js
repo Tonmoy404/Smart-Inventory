@@ -6,12 +6,10 @@ import axios from "axios";
 
 export default function AddSupplier() {
   const [formData, setFormData] = useState({
-    product_name: "",
-    category: "",
-    buying_price: "",
-    productQuantity: "",
-    delivery_date: "",
-    vendor_email: "",
+    name: "",
+    product: "",
+    contact: null,
+    email: "",
   });
 
   const handleChange = (event) => {
@@ -25,14 +23,14 @@ export default function AddSupplier() {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/items/create",
+        "http://localhost:3001/api/suppliers/add",
         formData
       );
       console.log(response.data);
       setFormData({
-        supplier_name: "",
+        name: "",
         product: "",
-        contact_number: null,
+        contact: null,
         email: null,
       });
 
@@ -50,10 +48,10 @@ export default function AddSupplier() {
       <div className="inventory-modal-form">
         <ModalInput
           label="Supplier Name"
-          inputId="supplier_name"
+          inputId="name"
           placeholder="Enter supplier name"
-          name="supplier_name"
-          value={formData.supplier_name}
+          name="name"
+          value={formData.name}
           onChange={handleChange}
         />
         <ModalInput
@@ -66,10 +64,10 @@ export default function AddSupplier() {
         />
         <ModalInput
           label="Contact Number"
-          inputId="contact_number"
+          inputId="contact"
           placeholder="Enter supplier contact number"
-          name="contact_number"
-          value={formData.contact_number}
+          name="contact"
+          value={formData.contact}
           onChange={handleChange}
         />
         <ModalInput
