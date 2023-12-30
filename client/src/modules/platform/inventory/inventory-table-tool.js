@@ -8,12 +8,12 @@ const columns = [
 
     format: (value) => value.toLocaleString("en-US"),
   },
-  {
-    id: "thresholdValue",
-    label: "Threshold Value",
-    minWidth: 170,
-    format: (value) => value.toLocaleString("en-US"),
-  },
+  // {
+  //   id: "thresholdValue",
+  //   label: "Threshold Value",
+  //   minWidth: 170,
+  //   format: (value) => value.toLocaleString("en-US"),
+  // },
   {
     id: "expiryDate",
     label: "Expiry Date",

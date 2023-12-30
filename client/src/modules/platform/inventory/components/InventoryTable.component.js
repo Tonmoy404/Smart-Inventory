@@ -30,7 +30,7 @@ export default function InventoryTable() {
     products: product.name,
     buyingPrice: product.buying_price,
     quantity: product.quantity,
-    thresholdValue: product.threshold_value,
+    // thresholdValue: product.threshold_value,
     expiryDate: convertTime(product.expiry_date),
     availability: product.status,
   }));
