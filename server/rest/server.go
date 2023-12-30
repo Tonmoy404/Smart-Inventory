@@ -36,7 +36,7 @@ func (server *Server) setupRouter() {
 	// CORS middleware
 	router.Use(corsMiddleware)
 
-	router.GET("/api/test", server.test)
+	router.GET("/api/prediction", server.test)
 	router.POST("/api/users/signup", server.signupUser)
 	router.POST("/api/users/login", server.loginUser)
 

@@ -1,6 +1,6 @@
 import { SmallChip } from "../../../core";
 
-function StockStatus() {
+function StockStatus4() {
   return (
     <div class="row">
       <div class="col-lg-2">
@@ -13,14 +13,14 @@ function StockStatus() {
                 /> */}
       </div>
       <div class="col-lg-7">
-        <p className="m-0">ACI Salt</p>
+        <p className="m-0">Milk</p>
         <span
           className="m-0"
           style={{
             fontSize: "6px!important",
           }}
         >
-          Remaining : 10
+          Remaining : 13
         </span>
       </div>
       <div class="col-lg-3">
@@ -30,4 +30,4 @@ function StockStatus() {
   );
 }
 
-export default StockStatus;
+export default StockStatus4;

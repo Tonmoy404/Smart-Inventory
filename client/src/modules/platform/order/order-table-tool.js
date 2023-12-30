@@ -20,12 +20,12 @@ const columns = [
     minWidth: 170,
     format: (value) => value.toLocaleString("en-US"),
   },
-  {
-    id: "status",
-    label: "Status",
-    minWidth: 170,
-    format: (value) => value.toLocaleString("en-US"),
-  },
+  // {
+  //   id: "status",
+  //   label: "Status",
+  //   minWidth: 170,
+  //   format: (value) => value.toLocaleString("en-US"),
+  // },
 ];
 
 const rows = Array.from({ length: 3 }, (_, index) => ({

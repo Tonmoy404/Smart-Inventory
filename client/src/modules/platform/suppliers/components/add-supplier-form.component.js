@@ -11,6 +11,8 @@ export default function AddSupplier() {
     email: "",
   });
 
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({
@@ -26,6 +28,7 @@ export default function AddSupplier() {
         formData
       );
       console.log(response.data);
+      setIsModalOpen(false);
       setFormData({
         name: "",
         product: "",
@@ -39,7 +42,11 @@ export default function AddSupplier() {
   };
 
   return (
-    <div className="inventory-modal p-3 bg-white">
+    <div
+      className={`inventory-modal p-3 bg-white ${
+        isModalOpen ? "d-block" : "d-none"
+      }`}
+    >
       <div className="inventory-modal-header">
         <h2 className="dashboard-card-heading">New Supplier</h2>
       </div>
