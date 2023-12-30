@@ -68,10 +68,10 @@ export default function Order() {
             </div>
             <div className="col-lg-5 inventory-table-header-button text-end">
               <div className="row">
-                <div className="col-lg-4 p-0">
+                <div className="col-lg-12 p-0">
                   <DynamicModal Element={<AddProduct />} label="Add Order" />
                 </div>
-                <div className="col-lg-3 p-0">
+                {/* <div className="col-lg-3 p-0">
                   <Button
                     className="me-2 custom-font-size text-dark"
                     variant="outlined"
@@ -87,7 +87,7 @@ export default function Order() {
                   >
                     Download all
                   </Button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -14,13 +14,13 @@ export default function Supplier() {
                     </div>
                     <div className="col-lg-5 inventory-table-header-button text-end">
                         <div className="row">
-                            <div className="col-lg-4 p-0">
+                            <div className="col-lg-12 p-0">
                                 <DynamicModal
                                     Element={<AddSupplier />}
                                     label="Add Supplier"
                                 />
                             </div>
-                            <div className="col-lg-3 p-0">
+                            {/* <div className="col-lg-3 p-0">
                                 <Button
                                     className="me-2 custom-font-size text-dark"
                                     variant="outlined"
@@ -36,7 +36,7 @@ export default function Supplier() {
                                 >
                                     Download all
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
