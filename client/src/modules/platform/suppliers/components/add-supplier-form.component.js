@@ -1,4 +1,3 @@
-
 import { Button } from "@mui/material";
 import { useState } from "react";
 import { ModalInput } from "../../../core";
@@ -33,7 +32,6 @@ export default function AddSupplier() {
         contact: null,
         email: null,
       });
-
     } catch (error) {
       alert("Check all input fields");
       console.error(error);
