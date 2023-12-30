@@ -45,7 +45,7 @@ const tabsData = [
   { label: "Reports", icon: "file-text", path: "/reports" },
   { label: "Suppliers", icon: "people", path: "/suppliers" },
   { label: "Orders", icon: "cart-plus", path: "/orders" },
-  { label: "Manage Store", icon: "shop", path: "/manage-store" },
+  { label: "Branches", icon: "shop", path: "/manage-store" },
 ];
 
 export default function VerticalTabs() {
