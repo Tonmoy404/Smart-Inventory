@@ -233,7 +233,6 @@ export default function AddProduct() {
         expiry_date: "",
         threshold_value: 0,
       });
-
     } catch (error) {
       alert("Check all input fields");
       console.error(error);
