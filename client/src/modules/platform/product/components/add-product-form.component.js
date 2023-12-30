@@ -13,6 +13,8 @@ export default function AddProduct() {
     threshold_value: 0,
   });
 
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     const numericValue = !isNaN(value) ? Number(value) : value;
@@ -40,6 +42,7 @@ export default function AddProduct() {
         }
       );
       console.log(response.data);
+      setIsModalOpen(false);
       setFormData({
         name: "",
         category: "",
@@ -55,7 +58,11 @@ export default function AddProduct() {
   };
 
   return (
-    <div className="inventory-modal p-3 bg-white">
+    <div
+      className={`inventory-modal p-3 bg-white ${
+        isModalOpen ? "d-block" : "d-none"
+      }`}
+    >
       <div className="inventory-modal-header">
         <h2 className="dashboard-card-heading">New Product</h2>
       </div>

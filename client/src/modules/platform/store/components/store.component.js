@@ -2,6 +2,8 @@ import { Card } from "@mui/material";
 import { DynamicModal } from "../../../core";
 import { AddProduct } from "../../product";
 import StoreCard from "./store-card.component";
+import StoreCard2 from "./store-card2.component";
+import StoreCard3 from "./store-card3.component";
 
 export default function Store() {
   const topCardData = [
@@ -55,10 +57,10 @@ export default function Store() {
           </div>
           <div className="row">
             <Card className="mt-4">
-              <StoreCard />
+              <StoreCard3 />
             </Card>
             <Card className="mt-4">
-              <StoreCard />
+              <StoreCard2 />
             </Card>
             <Card className="mt-4">
               <StoreCard />

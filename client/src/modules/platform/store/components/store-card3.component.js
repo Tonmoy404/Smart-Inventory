@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-export default function StoreCard() {
+export default function StoreCard3() {
   return (
     <div class="manage-store mt-2">
       <div class="row">
@@ -12,9 +12,9 @@ export default function StoreCard() {
         <div class="col-lg-7">
           <div class="manage-store-card-content">
             <h2 class="dashboard-card-heading"></h2>
-            <p>Rampura Branch</p>
-            <p>House:21 Road: D.I.T Road</p>
-            <p>+088-01647893125</p>
+            <p>Gulshan Branch</p>
+            <p>House: 48 Road:18</p>
+            <p>+880-1992766459</p>
           </div>
         </div>
         <div class="col-lg-2 ms-auto text-end">

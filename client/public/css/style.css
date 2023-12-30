@@ -1,379 +1,396 @@
 .login-page-left-heading {
-    color: #009ed8;
-    font-family: "Inter", sans-serif;
-    font-size: 47px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  color: #009ed8;
+  font-family: "Inter", sans-serif;
+  font-size: 47px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .login-page-right-image {
-    width: 48px;
+  width: 48px;
 }
 .login-page-right-heading {
-    font-family: "Inter", sans-serif;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 38px;
-    text-align: center;
-    color: #2b2f38;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+  color: #2b2f38;
 }
 .login-page-right-paragraph {
-    font-family: "Inter", sans-serif;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    color: #667085;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #667085;
 }
 .login-page-right-form-label {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    text-align: left;
-    color: #48505e;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #48505e;
 }
 .login-page-right-form-input {
-    border-radius: 8px;
-    border: 1px solid #d0d5dd;
-    background: #fff;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
 
-    /* Shadow/xs */
-    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  /* Shadow/xs */
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
 }
 .login-page-right-form-input:focus {
-    border: 1px solid #0acf83 !important;
+  border: 1px solid #0acf83 !important;
 }
 .login-page-right-form-input::placeholder {
-    font-family: "Inter", sans-serif;
-    color: #667085;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
+  font-family: "Inter", sans-serif;
+  color: #667085;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .login-page-right-form-check .checkbox input:focus {
-    border: 1px solid #0acf83 !important;
+  border: 1px solid #0acf83 !important;
 }
 .login-page-right-form-check .forgot-password a,
 .dont-have-a-account a {
-    color: #1366d9;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
+  color: #1366d9;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 .sign-in-button {
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    border-radius: 4px !important;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 4px !important;
 }
 .sign-in-with-google {
-    border: 1px solid #d0d5dd !important;
-    transition: all linear 0.3s;
+  border: 1px solid #d0d5dd !important;
+  transition: all linear 0.3s;
 }
 .sign-in-with-google:hover {
-    background: #fff !important;
-    border: 1px solid #0acf83 !important;
+  background: #fff !important;
+  border: 1px solid #0acf83 !important;
 }
 .dont-have-a-account p {
-    color: #667085;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 /* Sign Up Page  */
 .signup-page-right-form-password-info {
-    color: #667085;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 /* Dashboard Page  */
 .css-euma8y-MuiButtonBase-root-MuiTab-root > .MuiTab-iconWrapper {
-    margin-right: 10px !important;
+  margin-right: 10px !important;
 }
 .css-t3lg8-MuiTabs-indicator {
-    display: none;
+  display: none;
 }
 .css-1t9p2dd-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: #1570ef !important;
+  color: #1570ef !important;
 }
 .css-euma8y-MuiButtonBase-root-MuiTab-root {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    min-height: 50px !important;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  min-height: 50px !important;
 }
 .css-1g4ac1o-MuiTabs-root .MuiTabs-scrollButtons {
-    display: none !important;
+  display: none !important;
 }
 .dashboard-left-bottom-buttons {
-    padding: 9px 16px;
+  padding: 9px 16px;
 }
 .dashboard-left-bottom-buttons a {
-    color: #5d6679;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
+  color: #5d6679;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
 }
 .dashboard-right-header-search {
-    width: 50%;
-    padding: 10px 16px;
-    border-radius: 4px;
-    border: 1px solid #f0f1f3;
+  width: 50%;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 1px solid #f0f1f3;
 }
 .dashboard-right-header-search i {
-    width: 10% !important;
+  width: 10% !important;
 }
 .dashboard-right-header-search input {
-    border: none;
-    border: 1px solid #fff;
-    width: 85% !important;
-    padding: 0 !important;
-    border-radius: 2px;
+  border: none;
+  border: 1px solid #fff;
+  width: 85% !important;
+  padding: 0 !important;
+  border-radius: 2px;
 }
 .dashboard-right-header-search input:focus {
-    border: 1px solid #fff !important;
+  border: 1px solid #fff !important;
 }
 .dashboard-right-header-search input::placeholder {
-    color: #858d9d;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
+  color: #858d9d;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .dashboard-right-header-right i {
-    font-size: 20px;
-    color: #5d6679 !important;
+  font-size: 20px;
+  color: #5d6679 !important;
 }
 .dashboard-right-header-right img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .dashboard-left-header img {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 .dashboard-left-header h2 {
-    color: #1570ef;
-    text-align: left;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px; /* 150% */
+  color: #1570ef;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
 }
 
 .dashboard-parent {
-    background: #f0f1f3;
+  background: #f0f1f3;
 }
 .dashboard-sales-overview,
 .dashboard-inventory-summary {
-    color: #383e49;
-    border-radius: 8px;
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px; /* 150% */
+  color: #383e49;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
 }
 .dashboard-card-details span:first-child {
-    color: #5d6679;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 150% */
+  color: #5d6679;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
 }
 .dashboard-card-details span:last-child {
-    color: #667085;
+  color: #667085;
 
-    /* Body 2/Medium */
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
+  /* Body 2/Medium */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .dashboard-inventory-summary .dashboard-card-details span {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 .dashboard-card-heading {
-    color: #383e49;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px; /* 150% */
+  color: #383e49;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
 }
 
 /* Inventory Page  */
 .inventory-parent {
-    background: #f0f1f3;
+  background: #f0f1f3;
 }
 .inventory-card {
-    background: #fff;
-    border-radius: 8px;
+  background: #fff;
+  border-radius: 8px;
 }
 .inventory-top-card-column h2 {
-    color: var(--primary-primary-500, #1570ef);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
+  color: var(--primary-primary-500, #1570ef);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
 }
 .inventory-top-card-column-data .first-data {
-    color: var(--grey-grey-600, #5d6679);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
+  color: var(--grey-grey-600, #5d6679);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
 }
 .inventory-top-card-column-data .second-data {
-    color: var(--grey-grey-400, #858d9d);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
+  color: var(--grey-grey-400, #858d9d);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 .inventory-bottom-table {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 .inventory-table-header h2 {
-    color: var(--grey-grey-800, #383e49);
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
+  color: var(--grey-grey-800, #383e49);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
 }
 .inventory-table-header-button button {
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    padding: 10px 16px !important;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px 16px !important;
 }
 .inventory-table-header-button button:first-child {
-    color: #fff;
+  color: #fff;
 }
 .inventory-table-header-button button:nth-child(2),
 .inventory-table-header-button button:nth-child(3) {
-    color: #5d6679 !important;
+  color: #5d6679 !important;
 }
 .css-y8ay40-MuiTableCell-root {
-    color: var(--grey-grey-500, #667085) !important;
-    font-family: Inter !important;
-    font-size: 14px !important;
-    font-style: normal !important;
-    font-weight: 500 !important;
-    line-height: 20px !important;
+  color: var(--grey-grey-500, #667085) !important;
+  font-family: Inter !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
 }
 .css-1ex1afd-MuiTableCell-root {
-    color: var(--grey-grey-700, #48505e) !important;
-    font-family: Inter !important;
-    font-size: 14px !important;
-    font-style: normal !important;
-    font-weight: 500 !important;
-    line-height: 20px !important;
+  color: var(--grey-grey-700, #48505e) !important;
+  font-family: Inter !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
 }
 .css-pdct74-MuiTablePagination-selectLabel,
 .css-levciy-MuiTablePagination-displayedRows,
 .css-194a1fa-MuiSelect-select-MuiInputBase-input.css-194a1fa-MuiSelect-select-MuiInputBase-input.css-194a1fa-MuiSelect-select-MuiInputBase-input {
-    color: var(--grey-grey-700, #48505e) !important;
-    font-family: Inter !important;
-    font-size: 14px !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: 20px !important;
-    margin: 0;
+  color: var(--grey-grey-700, #48505e) !important;
+  font-family: Inter !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  margin: 0;
 }
 
 /* Inventory Modal  */
 .inventory-modal {
-    border: 1px solid #f2f2f2;
-    border-radius: 8px;
-    width: 500px;
-    margin: 0 auto;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  width: 500px;
+  margin: 0 auto;
 }
 .modal-input-label {
-    color: var(--grey-grey-700, #48505e);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
+  color: var(--grey-grey-700, #48505e);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
 }
 .modal-input input::placeholder {
-    color: var(--grey-grey-400, #858d9d) !important;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
+  color: var(--grey-grey-400, #858d9d) !important;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .modal-input input:focus {
-    border: 1px solid #0acf83 !important;
+  border: 1px solid #0acf83 !important;
 }
 .inventory-modal-button button {
-    padding: 10px 16px !important;
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
+  padding: 10px 16px !important;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 .inventory-modal-button .add-product {
-    background: #1366d9;
+  background: #1366d9;
 }
 .inventory-modal-button .discard {
-    color: var(--grey-grey-400, #858d9d);
-    border: 1px solid var(--grey-grey-50, #f0f1f3);
-    background: #fff !important;
+  color: var(--grey-grey-400, #858d9d);
+  border: 1px solid var(--grey-grey-50, #f0f1f3);
+  background: #fff !important;
 }
 
 /* Product View  Page  */
 .product-view-parent {
-    background: var(--grey-grey-50, #f0f1f3);
+  background: var(--grey-grey-50, #f0f1f3);
 }
 .product-view-wrapper {
-    border-radius: 8px !important;
+  border-radius: 8px !important;
 }
 .product-view-header-button button {
-    padding: 10px 16px !important;
-    border-color: rgba(16, 24, 40, 0.05);
-    transition: all linear 0.3s;
-    color: #5d6679 !important;
+  padding: 10px 16px !important;
+  border-color: rgba(16, 24, 40, 0.05);
+  transition: all linear 0.3s;
+  color: #5d6679 !important;
 }
 
 .MuiButtonBase-root {
-    font-size: 11px !important;
+  font-size: 11px !important;
+}
+
+.unique-button-logout {
+  border: 2px solid #048ec900;
+  background-color: #a20c0ce9;
+  color: rgb(255, 252, 252);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 9px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 10px;
+}
+
+.unique-button_-ogout:hover {
+  background-color: #f8fdfb; /* Change the background color on hover */
+  color: rgb(148, 5, 5); /* Change the text color on hover */
+  border-color: #a20c0ce9;
 }
