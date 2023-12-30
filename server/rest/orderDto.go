@@ -1,15 +1,15 @@
 package rest
 
 type createOrderReq struct {
-	ProductName  string  `form:"product_name" binding:"required"`
-	BuyingPrice  float64 `form:"buying_price" binding:"required"`
-	VendorEmail  string  `form:"vendor_email" binding:"required"`
-	Category     string  `form:"category" binding:"required"`
-	Quantity     int64   `form:"quantity" binding:"required"`
-	DeliveryDate int64   `form:"delivery_date" binding:"required"`
+	ProductName  string  `json:"product_name" binding:"required"`
+	BuyingPrice  float64 `json:"buying_price" binding:"required"`
+	VendorEmail  string  `json:"vendor_email" binding:"required"`
+	Category     string  `json:"category" binding:"required"`
+	Quantity     int64   `json:"quantity" binding:"required"`
+	DeliveryDate int64   `json:"delivery_date" binding:"required"`
 }
 
-type newOrder struct{
+type newOrder struct {
 }
 
 type updateOrderReq struct {

@@ -64,7 +64,7 @@ export default function AddOrder() {
       }`}
     >
       <div className="inventory-modal-header">
-        <h2 className="dashboard-card-heading">New Product</h2>
+        <h2 className="dashboard-card-heading">New Order</h2>
       </div>
       <div className="inventory-modal-form">
         <ModalInput

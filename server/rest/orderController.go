@@ -12,7 +12,7 @@ import (
 
 func (s *Server) createOrder(ctx *gin.Context) {
 	var req createOrderReq
-	err := ctx.ShouldBind(&req)
+	err := ctx.ShouldBindJSON(&req)
 	if err != nil {
 		logger.Error(ctx, "cannot pass validation", err)
 		ctx.JSON(http.StatusBadRequest, s.svc.Error(ctx, util.EN_API_PARAMETER_INVALID_ERROR, "Bad Request"))
