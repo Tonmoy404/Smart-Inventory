@@ -13,7 +13,6 @@ export default function AddProduct() {
     threshold_value: 0,
   });
 
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     const numericValue = !isNaN(value) ? Number(value) : value;
@@ -24,12 +23,20 @@ export default function AddProduct() {
   };
   const handleSubmit = async () => {
     try {
+      const dataToSend = {
+        ...formData,
+        quantity: parseInt(formData.quantity, 10),
+        threshold_value: parseInt(formData.threshold_value, 10),
+        buying_price: parseFloat(formData.buying_price), // Convert quantity to a number
+      };
+
       const response = await axios.post(
         "http://localhost:3001/api/items/create",
-        JSON.stringify(formData),  {
+        JSON.stringify(formData),
+        {
           headers: {
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         }
       );
       console.log(response.data);
@@ -60,6 +67,7 @@ export default function AddProduct() {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          required
         />
         <ModalInput
           label="Category"
@@ -68,6 +76,7 @@ export default function AddProduct() {
           name="category"
           value={formData.category}
           onChange={handleChange}
+          required
         />
         <ModalInput
           label="Buying Price"
@@ -76,6 +85,7 @@ export default function AddProduct() {
           name="buying_price"
           value={formData.buying_price}
           onChange={handleChange}
+          required
         />
         <ModalInput
           label="Quantity"
@@ -84,6 +94,7 @@ export default function AddProduct() {
           name="quantity"
           value={formData.quantity}
           onChange={handleChange}
+          required
         />
         <ModalInput
           label="Expiry Date"
@@ -92,6 +103,7 @@ export default function AddProduct() {
           name="expiry_date"
           value={formData.expiry_date}
           onChange={handleChange}
+          required
         />
         <ModalInput
           label="Threshold Value"
@@ -100,6 +112,7 @@ export default function AddProduct() {
           name="threshold_value"
           value={formData.threshold_value}
           onChange={handleChange}
+          required
         />
         <Button variant="contained" onClick={handleSubmit}>
           Add Product

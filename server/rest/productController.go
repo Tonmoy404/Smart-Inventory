@@ -55,6 +55,8 @@ func (s *Server) createProduct(ctx *gin.Context) {
 		ExpiryDate:     expiryDate,
 	}
 
+	logger.Info(ctx, "the request", product)
+
 	pro, err := s.svc.CreateProduct(ctx, product)
 	if err != nil {
 		logger.Error(ctx, "could not create product", err)
