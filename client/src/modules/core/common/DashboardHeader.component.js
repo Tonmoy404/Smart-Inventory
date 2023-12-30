@@ -18,7 +18,7 @@ export default function DashboardHeader() {
               </div>
             </div>
             <div className="col-lg-2 dashboard-right-header-right text-end">
-              <i class="bi bi-bell mx-4"></i>
+              {/* <i class="bi bi-bell mx-4"></i> */}
               <img src="../images/profile-image.png"></img>
             </div>
           </div>

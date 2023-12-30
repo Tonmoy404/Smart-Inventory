@@ -78,6 +78,10 @@ const Routes = createBrowserRouter([
       </DashboardLayout>
     ),
   },
+  {
+    path: "/login",
+    element: <Login />,
+  },
 ]);
 
 export default Routes;
